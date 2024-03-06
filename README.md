@@ -14,7 +14,7 @@ Modify the make_ocean_atmos_grids.py file to designate depth of ocean and land a
 
 The generate_grids.sh file creates grids for the ocean and the atmosphere as well as mosaic files for the model components. It requires the MIDAS Python package (https://github.com/mjharriso/MIDAS). Modify the generate_grids.sh to include the path to MIDAS on your machine. Then run the script from the command line. Running this script will generate new netcdf files.
 
-Copy all the newly created netcdf files into the INPUT/ directory within your MOM6 run directory. If you'd like, take a look at the topography file you generated (twopole_topography.nc) using the view_grids.ipynb notebook. Also ensure that the RIVER/river_destination_field_new is in the INPUT/ directory as well. 
+Copy all the newly created netcdf files into the INPUT/ directory within your MOM6 run directory. If you'd like, take a look at the topography file you generated (twopole_topography.nc) using the view_grids.ipynb notebook. Also ensure that the RIVER/river_destination_field_new is in the INPUT/ directory as well. Be sure to rename river_destination_field_new to river_destination_field. 
 
 Before running MOM6, you will need to update runtime parameters in the MOM6 input parameters. Ensure that the MOM_input file in your run directory contains the following parameters:
 TOPO_CONFIG = "file"
