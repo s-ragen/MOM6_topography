@@ -5,7 +5,8 @@ Within this directory are the following files:
   - Shell script to run to create the new topography file: 'generate_grids.sh'  
   - Netcdf files with grid specifications for the oceanThis directory contains a script that generates custom topography for MOM6.
   - File that contains the topography that you generate with the make_ocean_atmos_grids.py and the generate_grids.sh files: twopole_topography.nc
-  - Jupyter notebook file that can be run to look at the topography that you created: view_grids.ipynb 
+  - Jupyter notebook file that can be run to look at the topography that you created: view_grids.ipynb
+  - a directory with a script to make a river destination field file and the file that route river runoff to the closest ocean grid point: RIVER/river_destination_field_new 
 
 To create custom topography in MOM6, follow the work flow outlined here:
 
@@ -13,7 +14,7 @@ Modify the make_ocean_atmos_grids.py file to designate depth of ocean and land a
 
 The generate_grids.sh file creates grids for the ocean and the atmosphere as well as mosaic files for the model components. It requires the MIDAS Python package (https://github.com/mjharriso/MIDAS). Modify the generate_grids.sh to include the path to MIDAS on your machine. Then run the script from the command line. Running this script will generate new netcdf files.
 
-Copy all the newly created netcdf files into the INPUT/ directory within your MOM6 run directory. If you'd like, take a look at the topography file you generated (twopole_topography.nc) using the view_grids.ipynb notebook. 
+Copy all the newly created netcdf files into the INPUT/ directory within your MOM6 run directory. If you'd like, take a look at the topography file you generated (twopole_topography.nc) using the view_grids.ipynb notebook. Also ensure that the RIVER/river_destination_field_new is in the INPUT/ directory as well. 
 
 Before running MOM6, you will need to update runtime parameters in the MOM6 input parameters. Ensure that the MOM_input file in your run directory contains the following parameters:
 TOPO_CONFIG = "file"
