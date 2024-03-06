@@ -1,0 +1,16 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Ragen"
+  given-names: "Zho"
+  orcid: "https://orcid.org/0000-0003-0987-6060"
+- family-names: "Shao"
+  given-names: "Andrew"
+  orcid: "https://orcid.org/0000-0003-3658-512X"
+- family-names: "Maroon"
+  given-names: "Elizabeth"
+  orcid: "https://orcid.org/0000-0002-1660-7822"
+title: "MOM6 Topography"
+version: 1.0.0
+date-released: 2024-03-04
+url: "https://github.com/s-ragen/MOM6_topography.git"
